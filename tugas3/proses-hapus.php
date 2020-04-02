@@ -3,12 +3,14 @@
 
     $id_gitar = $_GET['id_gitar'];
 
-    $query = mysqli_query($koneksi, "DELETE FROM gitar WHERE id_gitar= $id_gitar;");
+    $query = "DELETE FROM gitar WHERE id_gitar = $id_gitar";
 
-    if($query) {
-        header("location=index.php?pesan=berhasil");
+    $result = mysqli_query($koneksi, $query);
+
+    if($result) {
+        header("location:index.php?pesan=berhasil");
         exit;
     } else {
-        header("location=index.php?pesan=gagal");
+        header("location:index.php?pesan=gagal");
     }
 ?>

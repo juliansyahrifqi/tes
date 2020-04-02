@@ -1,5 +1,10 @@
 <?php
-   
+    session_start();
+
+    $username = isset($_SESSION['username']) ?  $_SESSION['username'] : false;
+    if(!$username) {
+        header("location:login.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -52,8 +57,8 @@
                                 <h2>".$res['nama_gitar']."</h2>
                                 <p> ".$res['pick_up']." </p>
                                 <p> ".$res['buatan']." </p>
-                                <p> ".$res['harga']."</p>
-                                <button><a href='edit-gitar.php?id_gitar=".$res['id_gitar']."'>Edit Data</a></button>
+                                <p> Rp. ".$res['harga']."</p>
+                                <button><a href='update-gitar.php?id_gitar=".$res['id_gitar']."'>Update Data</a></button>
                                 <button><a href='konfirmasi-hapus.php?id_gitar=".$res['id_gitar']."'>Hapus Data</a></button>
                             </div>    
                         </div>";

@@ -8,22 +8,22 @@
 </head>
 <body>
 
+<?php 
+    require("configdb.php");
+
+    $id_gitar = $_GET['id_gitar'];
+
+    if($id_gitar == "") {
+        header("location:index.php");
+        die;
+    }
+
+    $query = mysqli_query($koneksi, "SELECT * from gitar WHERE id_gitar=$id_gitar LIMIT 1;");
+?>
+
 <div class="container-barang">
-    <form action="proses-hapus.php?id=<?php echo $id_gitar ?>" method="post">
-    
+    <form action="proses-hapus.php?id_gitar=<?php echo $id_gitar ?>" method="post">
         <?php
-            require("configdb.php");
-
-            $id_gitar = $_GET['id_gitar'];
-
-            if($id_gitar == "") {
-                header("location:index.php");
-                die;
-            }
-
-            $query = mysqli_query($koneksi, "SELECT * from gitar WHERE id_gitar=$id_gitar LIMIT 1;");
-
-            
             while($res = mysqli_fetch_assoc($query)) {
                 echo "<div class='card'>
                         <img src='img/".$res['gambar']."'/>
@@ -31,13 +31,12 @@
                             <h2>".$res['nama_gitar']."</h2>
                             <p> ".$res['pick_up']." </p>
                             <p> ".$res['buatan']." </p>
-                            <p> ".$res['harga']."</p>
+                            <p> Rp. ".$res['harga']."</p>
                         </div>    
                     </div>";
             }       
         ?>   
-
-        <input type="submit" value="Konfirmasi Hapus">
+    <input type="submit" value="Konfirmasi Hapus">
     </form>
 </div> 
     

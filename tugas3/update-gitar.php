@@ -19,11 +19,10 @@
         }
 
         $query = mysqli_query($koneksi, "SELECT * FROM gitar WHERE id_gitar = $id_gitar LIMIT 1");    
-
     ?> 
 
     <div class="container-input">
-    <form action="proses-update.php?id_gitar=<?php echo $id_gitar ?>">
+    <form action="proses-update-gitar.php?id_gitar=<?php echo $id_gitar ?>" method="post" enctype="multipart/form-data">
         <h1>Update Data Gitar</h1>  
             <?php 
                 while($res = mysqli_fetch_assoc($query)) {
@@ -55,7 +54,7 @@
                 }
             ?>
             <div class="element-form">
-                <input type="submit" value="SUBMIT">
+                <input type="submit" value="UPDATE">
             </div>
         </form>
     </div>

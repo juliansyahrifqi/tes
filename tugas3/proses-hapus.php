@@ -8,7 +8,7 @@
     $result = mysqli_query($koneksi, $query);
 
     if($result) {
-        header("location:index.php?pesan=berhasil");
+        header("location:index.php?pesan=sukses");
         exit;
     } else {
         header("location:index.php?pesan=gagal");

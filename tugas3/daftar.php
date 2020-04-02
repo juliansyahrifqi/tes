@@ -10,7 +10,7 @@
 <body>
     <style>
         html {
-            background-image: url(bgdaftar.jpg);
+            background-image: url(img/bg.jpg);
             background-size: cover;
         }
     </style>

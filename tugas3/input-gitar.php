@@ -9,6 +9,7 @@
 <body>
     <div class="container-input">
         <form action="proses-input-gitar.php" method="post" enctype="multipart/form-data">
+        <h1>Input Gitar</h1>
             <?php
                  if(!empty($_GET['pesan'])) {
                     if($_GET['pesan'] == "gagal") {

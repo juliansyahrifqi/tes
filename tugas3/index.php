@@ -27,15 +27,11 @@
          if(!empty($_GET['pesan'])) {
             if($_GET['pesan'] == "sukses") {
                 echo "<div class='alert alert-sukses'>
-                        <p><strong>Sukses!</strong> Data berhasil ditambahkan!</p>
+                        <p><strong>Sukses!</strong></p>
                     </div>";
-            } else if ($_GET['pesan'] == "berhasil") {
-                echo "<div class='alert alert-sukses'>
-                    <p><strong>Sukses!</strong> Data berhasil dihapus!</p>
-                </div>";
             } else if ($_GET['pesan'] == "gagal") {
                 echo "<div class='alert alert-gagal'>
-                     <p><strong>Gagal!</strong> Data gagal dihapus!</p>
+                     <p><strong>Gagal!</strong></p>
                 </div>";
             }
         }
@@ -65,7 +61,7 @@
                 }
             } else {
                 echo "<div class='alert alert-gagal'>
-                    <p><strong>Gagal!</strong> Belum ada data !</p>
+                    <p><strong>Belum ada data !</strong></p>
                 </div>";
             }
         ?>  

@@ -18,7 +18,7 @@
         header("location:index.php?pesan=sukses");
         exit;
     } else {
-        header("location:index.php?pesan=gagal");
+        header("location:input-gitar.php?pesan=gagal");
     }
 
 ?>

@@ -15,10 +15,10 @@
                         ");
 
     if($result) {
-        echo $gambar;
+        header("location:index.php?pesan=sukses");
         exit;
     } else {
-        echo "error";
+        header("location:index.php?pesan=gagal");
     }
 
 ?>

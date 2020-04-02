@@ -16,9 +16,6 @@
     </style>
 
     <div class="container-register">
-        
-
-
         <form action="proses-daftar.php" method="post">
             <h1>DAFTAR AKUN</h1>
             <?php

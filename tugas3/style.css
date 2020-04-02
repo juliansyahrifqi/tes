@@ -15,7 +15,9 @@ h1 {
     align-items: center;
 }
 
-form {
+.container-login form,
+.container-register form,
+.container-input form {
     border: 1px solid black;
     width: 30%;
     height: auto;

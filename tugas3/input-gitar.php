@@ -9,6 +9,16 @@
 <body>
     <div class="container-input">
         <form action="proses-input-gitar.php" method="post" enctype="multipart/form-data">
+            <?php
+                 if(!empty($_GET['pesan'])) {
+                    if($_GET['pesan'] == "gagal") {
+                        echo "<div class='alert alert-gagal'>
+                                <p><strong>Gagal</strong> Data gagal ditambahkan!</p>
+                            </div>";
+                    }
+                }
+            ?>
+            
             <div class="element-form">
                 <label for="namagitar">Nama Gitar</label>
                 <input type="text" name="nama-gitar" required>
@@ -28,7 +38,7 @@
             </div>
             <div class="element-form">
                 <label for="harga">Harga</label>
-                <input type="text" name="harga">
+                <input type="text" name="harga" required>
             </div>
             <div class="element-form">
                 <label for="file">Gambar</label>

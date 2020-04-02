@@ -1,0 +1,114 @@
+body {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+}
+
+.container-register, .container-login, 
+.container-input {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    border: 1px solid black;
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.element-form, .alert {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 40px;
+}
+
+.element-form input[type=text], .element-form input[type=password] {
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+.element-form input[type=submit] {
+    height: 50px;
+    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    background-color: #141e30;
+    background: linear-gradient(to left, #141e30, #243b55);
+    color: white;
+    border-radius: 40px;
+}
+
+.element-form p {
+    text-align: center;
+}
+
+.container-barang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    width: 250px;
+    height: 300px;
+}
+
+.index-header {
+    text-align: center;
+    margin: auto;
+}
+
+.index-header button {
+    text-align: center;
+    width: 150px; 
+    height: 50px;
+    text-decoration: none;
+    border: none;
+    margin: 10px;
+}
+
+.index-header a {
+    text-decoration: none;
+    color: black;
+}
+
+.alert {
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 10px;
+    justify-content: center;
+    
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.alert-gagal {
+    background: #ff4444;
+    border: 1px solid #ff2121;
+}
+
+.alert-sukses {
+    background: #00C851;
+    border: 1px solid rgb(0, 131, 52);
+}
